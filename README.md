@@ -1,10 +1,10 @@
 # abcCellmap
 
-####  Human Blood Cell Landscape R package for single cell mapping
+#### R package for the prediction of blood cells at single-cell level
 
-abcCellmap is an R package to predict the cell types in the hematopoietic atlas for large data, which extends our ABC website function of cell map (http://scrna.sklehabc.com/). 
+abcCellmap is a R package to predict the blood cell types for large amounts of data, which extends the function of cell map from ABC website(http://scrna.sklehabc.com/). 
 
-Users can predict the cell types of hematopoietic cells by implementing two approaches (Scmap and Seurat). Cells in our ABC are labeled by 43 different RNA clusters according to unsupervised clustering of single-cell transcriptional profiles, and also labeled by 32 immunophenotypic cell types, involving HSPC, B cell, T cell, NK cell, Neutrophil, Monocyte and Erythrocyte population.
+Users can achieve the prediction by using two approaches (Scmap and Seurat). Single cells in our ABC reference are labeled by 43 different RNA clusters according to unsupervised clustering of single-cell transcriptional profiles, and also labeled by 32 immunophenotypic cell types, involving HSPC, B cell, T cell, NK cell, Neutrophil, Monocyte and Erythrocyte population.
 
 ### Installation
 
@@ -20,13 +20,15 @@ install_github("pzhulab/abcCellmap")
 
 ```R
 library(abcCellmap)
-# query.exp is an example expression matrix from ABC project(Atlas of Human Blood Cells).
+# query.exp is an example of expression matrix from ABC project(Atlas of Blood Cells).
 > data(query.exp)
 > dim(query.exp)
 [1] 500   300
 # 500 genes expression value of 300 cells
 
-# abcCellmap has one parameter: queryData, a space-delimited txt format file containing the expression matrix. Each row should be a gene symbol and each column should be a single cell. We prefer the expression data is presented by UMIs (Unique Molecular Identifiers) per gene in each single cell. 
+# abcCellmap has one parameter: queryData, a tab-delimited txt format file containing the expression matrix. 
+# Each row should be a gene symbol and each column should be a single cell. 
+# We prefer the expression data is presented by UMIs (Unique Molecular Identifiers) per gene in each single cell. 
 > mapresult <- abcCellmap(queryData = query.exp)
 
 ```

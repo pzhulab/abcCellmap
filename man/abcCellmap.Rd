@@ -7,7 +7,7 @@
 abcCellmap(queryData)
 }
 \arguments{
-\item{queryData}{a space-delimited txt format file containing the expression matrix. Each row should be a gene symbol and each column should be a single cell. We prefer the expression data is presented by UMIs (Unique Molecular Identifiers) per gene in each single cell.}
+\item{queryData}{a tab-delimited txt format file containing the expression matrix. Each row should be a gene symbol and each column should be a single cell. We prefer the expression data is presented by UMIs (Unique Molecular Identifiers) per gene in each single cell.}
 }
 \value{
 Users can predict the cell types of hematopoietic cells by implementing two approaches (Scmap and Seurat). Cells in our ABC are labeled by 43 different RNA clusters according to unsupervised clustering of single-cell transcriptional profiles, and also labeled by 32 immunophenotypic cell types, involving HSPC, B cell, T cell, NK cell, Neutrophil, Monocyte and Erythrocyte population. The format of result are as follows:
