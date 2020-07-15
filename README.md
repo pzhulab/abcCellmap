@@ -9,7 +9,8 @@ Users can achieve the prediction by using two approaches (Scmap and Seurat). Sin
 ### Dependencies
 
 ```R
-#Recommended versions of R packages are as follows:  
+#Recommended versions of R packages are as follows:
+*  R (≥ 3.4.0)  
 *  dplyr (0.8.0.1) 
 *  SingleCellExperiment (1.6.0) 
 *  SummarizedExperiment (1.14.1) 
