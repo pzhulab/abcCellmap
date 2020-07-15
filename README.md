@@ -2,7 +2,7 @@
 
 #### R package for the prediction of blood cells at single-cell level
 
-abcCellmap is a R package to predict the blood cell types for large amounts of data, which extends the function of cell map from ABC website(http://scrna.sklehabc.com/). 
+abcCellmap is an R package to predict the blood cell types for large amounts of data, which extends the function of cell map from ABC website(http://scrna.sklehabc.com/). 
 
 Users can achieve the prediction by using two approaches (Scmap and Seurat). Single cells in our ABC reference are labeled by 43 different RNA clusters according to unsupervised clustering of single-cell transcriptional profiles, and also labeled by 32 immunophenotypic cell types, involving HSPC, B cell, T cell, NK cell, Neutrophil, Monocyte and Erythrocyte population.
 
@@ -25,8 +25,10 @@ Users can achieve the prediction by using two approaches (Scmap and Seurat). Sin
 #This require devtools  
 install.packages('devtools')
 library(devtools)
-# Installation in R/RStudio
+#Installation in R/RStudio
 install_github("pzhulab/abcCellmap")
+#Or install locally
+devtools::install_local("abcCellmap-master.zip")
 ```
 
 ### Quick Start
